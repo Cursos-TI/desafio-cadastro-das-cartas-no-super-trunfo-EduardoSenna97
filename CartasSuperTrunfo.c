@@ -17,7 +17,7 @@ int main() {
     printf("Código da carta - é o 'serial' que identifica cada carta, pois cada uma é ÚNICA ~ Exemplo: Z09\n");
     printf("Nome da cidade - não preciso explicar né?\n");
     printf("População - quantas pessoas moram na cidade?\n");
-    printf("Área em metros quadrados - então... Espero que você seja bom em geografia :)\n");
+    printf("Área em kilometros quadrados - então... Espero que você seja bom em geografia :)\n");
     printf("PIB (Produto Interno Bruto) - o quanto esse lugar é rico?\n");
     printf("Pontos turísticos (quantidade) - nesse lugar dá para passear ou não?\n");
     printf("____________________________________________________________________________________________________\n\n");
@@ -44,7 +44,7 @@ int main() {
     printf("\nPopulação: \n");
     scanf("%d", &populacao1);
 
-    printf("\nÁrea em metros quadrados: \n");
+    printf("\nÁrea em kilometros quadrados: \n");
     scanf("%f", &area1);
 
     printf("\nPIB: \n");
@@ -60,7 +60,7 @@ int main() {
     printf("Código da carta: %s\n", codigo1);
     printf("Nome da cidade: %s\n", nome1);
     printf("População: %d\n", populacao1);
-    printf("Área em metros quadrados: %.2fkm²\n", area1);
+    printf("Área em kilometros quadrados: %.2fkm²\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", turistico1);
     printf("---------------------------------------------------------------------------\n\n");
@@ -79,7 +79,7 @@ int main() {
     printf("\nPopulação: \n");
     scanf("%d", &populacao2);
 
-    printf("\nÁrea em metros quadrados: \n");
+    printf("\nÁrea em kilometros quadrados: \n");
     scanf("%f", &area2);
 
     printf("\nPIB: \n");
@@ -95,7 +95,7 @@ int main() {
     printf("Código da carta: %s\n", codigo2);
     printf("Nome da cidade: %s\n", nome2);
     printf("População: %d\n", populacao2);
-    printf("Área em metros quadrados: %.2fkm²\n", area2);
+    printf("Área em kilometros quadrados: %.2fkm²\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", turistico2);
     printf("---------------------------------------------------------------------------\n\n");
