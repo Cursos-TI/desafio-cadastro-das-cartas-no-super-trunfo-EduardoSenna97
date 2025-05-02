@@ -27,7 +27,7 @@ int main() {
     // Declaração das variáveis das cartas:
     char codigo1[6], codigo2[6];
     char nome1[50], nome2 [50];
-    int populacao1, populacao2;
+    float populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int turistico1, turistico2;
@@ -42,7 +42,7 @@ int main() {
     scanf("%s", nome1);
 
     printf("\nPopulação: \n");
-    scanf("%d", &populacao1);
+    scanf("%f", &populacao1);
 
     printf("\nÁrea em kilometros quadrados: \n");
     scanf("%f", &area1);
@@ -59,7 +59,7 @@ int main() {
     printf("___________________________________________________________________________\n\n");
     printf("Código da carta: %s\n", codigo1);
     printf("Nome da cidade: %s\n", nome1);
-    printf("População: %d\n", populacao1);
+    printf("População: %f\n", populacao1);
     printf("Área em kilometros quadrados: %.2fkm²\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", turistico1);
@@ -77,7 +77,7 @@ int main() {
     scanf("%s", nome2);
 
     printf("\nPopulação: \n");
-    scanf("%d", &populacao2);
+    scanf("%f", &populacao2);
 
     printf("\nÁrea em kilometros quadrados: \n");
     scanf("%f", &area2);
@@ -94,15 +94,61 @@ int main() {
     printf("___________________________________________________________________________\n\n");
     printf("Código da carta: %s\n", codigo2);
     printf("Nome da cidade: %s\n", nome2);
-    printf("População: %d\n", populacao2);
+    printf("População: %f\n", populacao2);
     printf("Área em kilometros quadrados: %.2fkm²\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", turistico2);
     printf("---------------------------------------------------------------------------\n\n");
 
+    // Desafio Super Trunfo Países
+    // Tema 2 - Cálculo de PIB per capta e Densidade populacional
+
+    printf("Você foi bem, mas acho que esquecemos de duas coisas que verdadeiramente nos dizem MUITO sobre o país. Elas são:\n");
+    printf("PIB per capta - É a média de riqueza por pessoa;\n");
+    printf("Densidade populacional - É a quantidade de pessoas por área (km²)\n\n");
+    printf("Eu estava esperando que você notasse que faltava esses dois, mas como não disse nada, deixa que eu ajusto as cartas para você.\n\n");
+    printf("---------------------------------------------------------------------------\n\n");
+
+    // Processamento de dados carta 1 - Cálculo do PIB per capta e densidade populacional
+
+    float pibCapta1 = pib1 / populacao1;
+    float densidadePopulacional1 = populacao1 / area1;
+
+    // Processamento de dados carta 2 - Cálculo do PIB per capta e densidade populacional
+
+    float pibCapta2 = pib2 / populacao2;
+    float densidadePopulacional2 = populacao2 / area2;
+
+    // Saída de dados - Expondo as cartas para o usuário com as novas informações
+
+    printf("Carta 1:\n\n");
+    printf("___________________________________________________________________________\n\n");
+    printf("Código da carta: %s\n", codigo1);
+    printf("Nome da cidade: %s\n", nome1);
+    printf("População: %.2f\n", populacao1);
+    printf("Área em kilometros quadrados: %.2fkm²\n", area1);
+    printf("PIB: %.2f\n", pib1);
+    printf("Pontos turísticos: %d\n", turistico1);
+    printf("PIB per capta: %.2f reais\n", pibCapta1);
+    printf("Densidade populacional: %.2fkm²\n", densidadePopulacional1);
+    printf("___________________________________________________________________________\n\n");
+
+    printf("Carta 2:\n\n");
+    printf("___________________________________________________________________________\n\n");
+    printf("Código da carta: %s\n", codigo2);
+    printf("Nome da cidade: %s\n", nome2);
+    printf("População: %f\n", populacao2);
+    printf("Área em kilometros quadrados: %.2fkm²\n", area2);
+    printf("PIB: %.2f\n", pib2);
+    printf("Pontos turísticos: %d\n", turistico2);
+    printf("PIB per capta: %.2f reais\n", pibCapta2);
+    printf("Densidade populacional: %.2fkm²\n", densidadePopulacional2);
+    printf("___________________________________________________________________________\n\n");
+
+
     // Agradecimento ao usuário:
 
-    printf("Caramba, você é bom mesmo! Espero que tenha entendido como tudo funciona.\n");
+    printf("Então, o que achou? Espero que tenha 'se ligado' e entendido como tudo funciona.\n");
     printf("Agora é só se divertir!         ~ Que a sorte esteja sempre a seu favor... ~\n\n");
 
     return 0;
