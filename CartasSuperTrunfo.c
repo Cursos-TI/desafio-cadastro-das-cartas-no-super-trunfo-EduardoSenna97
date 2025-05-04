@@ -1,7 +1,7 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das Cartas
+// Nível 1 (Novato) - Cadastro das Cartas
 
 
 int main() {
@@ -27,7 +27,7 @@ int main() {
     // Declaração das variáveis das cartas:
     char codigo1[6], codigo2[6];
     char nome1[50], nome2 [50];
-    float populacao1, populacao2;
+    unsigned long int populacao1, populacao2;
     float area1, area2;
     float pib1, pib2;
     int turistico1, turistico2;
@@ -42,7 +42,7 @@ int main() {
     scanf("%s", nome1);
 
     printf("\nPopulação: \n");
-    scanf("%f", &populacao1);
+    scanf("%lu", &populacao1);
 
     printf("\nÁrea em kilometros quadrados: \n");
     scanf("%f", &area1);
@@ -59,7 +59,7 @@ int main() {
     printf("___________________________________________________________________________\n\n");
     printf("Código da carta: %s\n", codigo1);
     printf("Nome da cidade: %s\n", nome1);
-    printf("População: %f\n", populacao1);
+    printf("População: %lu\n", populacao1);
     printf("Área em kilometros quadrados: %.2fkm²\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", turistico1);
@@ -77,7 +77,7 @@ int main() {
     scanf("%s", nome2);
 
     printf("\nPopulação: \n");
-    scanf("%f", &populacao2);
+    scanf("%lu", &populacao2);
 
     printf("\nÁrea em kilometros quadrados: \n");
     scanf("%f", &area2);
@@ -94,14 +94,14 @@ int main() {
     printf("___________________________________________________________________________\n\n");
     printf("Código da carta: %s\n", codigo2);
     printf("Nome da cidade: %s\n", nome2);
-    printf("População: %f\n", populacao2);
+    printf("População: %lu\n", populacao2);
     printf("Área em kilometros quadrados: %.2fkm²\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", turistico2);
     printf("---------------------------------------------------------------------------\n\n");
 
     // Desafio Super Trunfo Países
-    // Tema 2 - Cálculo de PIB per capta e Densidade populacional
+    // Nível 2 (Aventureiro) - Cálculo de PIB per capta e Densidade populacional
 
     printf("Você foi bem, mas acho que esquecemos de duas coisas que verdadeiramente nos dizem MUITO sobre o país. Elas são:\n");
     printf("PIB per capta - É a média de riqueza por pessoa;\n");
@@ -125,7 +125,7 @@ int main() {
     printf("___________________________________________________________________________\n\n");
     printf("Código da carta: %s\n", codigo1);
     printf("Nome da cidade: %s\n", nome1);
-    printf("População: %.2f\n", populacao1);
+    printf("População: %lu\n", populacao1);
     printf("Área em kilometros quadrados: %.2fkm²\n", area1);
     printf("PIB: %.2f\n", pib1);
     printf("Pontos turísticos: %d\n", turistico1);
@@ -137,7 +137,7 @@ int main() {
     printf("___________________________________________________________________________\n\n");
     printf("Código da carta: %s\n", codigo2);
     printf("Nome da cidade: %s\n", nome2);
-    printf("População: %f\n", populacao2);
+    printf("População: %lu\n", populacao2);
     printf("Área em kilometros quadrados: %.2fkm²\n", area2);
     printf("PIB: %.2f\n", pib2);
     printf("Pontos turísticos: %d\n", turistico2);
@@ -146,9 +146,37 @@ int main() {
     printf("___________________________________________________________________________\n\n");
 
 
+    // Desafio Super Trunfo Países
+    // Nivel 3 (Mestre) - Batalha de Cartas no Super Trunfo + Super Poder
+
+    printf("Cartas interessantes... Mas você sabia que elas têm SUPERPODERES?\nEles nada mais são que a soma de todos os atributos numéricos!\n\n ");
+    printf("Aproveitando a deixa, vamos ver quem têm mais vitórias e quem tem o MAIOR SUPERPODER!\n\n");
+
+    float superPoder1 = populacao1 + area1 + pib1 + (float)turistico1 + pibCapta1 + (1.0 / densidadePopulacional1);
+    float superPoder2 = populacao2 + area2 + pib2 + (float)turistico2 + pibCapta2 + (1.0 / densidadePopulacional2);
+
+    float resultadoPopulacao = (populacao1 > populacao2);
+    float resultadoArea = (area1 > area2);
+    float resultadoPib = (pib1 > pib2);
+    float resultadoTuristico = (turistico1 > turistico2);
+    float resultadoPibCapta = (pibCapta1 > pibCapta2);
+    float resultadoDensidadePopulacional = (densidadePopulacional1 < densidadePopulacional2);
+
+    printf("Vamos organizar os resultados para as comparações!\nA Carta 1 ganha quando resultado for '1', já a Carta 2 ganha quando o resultado for '0'.\n\nQUEM GANHOU:\n\n");
+    printf("---Comparação das cartas---\n\n");
+    printf("População: %.0f\n", resultadoPopulacao);
+    printf("Área: %.0f\n", resultadoArea);
+    printf("PIB: %.0f\n", resultadoPib);
+    printf("Pontos turísticos: %.0f\n", resultadoTuristico);
+    printf("PIB per capta: %.0f\n", resultadoPibCapta);
+    printf("Densidade populacional: %.0f\n", resultadoDensidadePopulacional);
+    printf("-----------------------------------------\n\n");
+
+
+
     // Agradecimento ao usuário:
 
-    printf("Então, o que achou? Espero que tenha 'se ligado' e entendido como tudo funciona.\n");
+    printf("Então, o que achou? Espero que tenha gostado e entendido como tudo funciona!\n");
     printf("Agora é só se divertir!         ~ Que a sorte esteja sempre a seu favor... ~\n\n");
 
     return 0;
